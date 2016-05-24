@@ -8,7 +8,6 @@
 
 #import "UseMethods.h"
 
-
 @implementation UseMethods
 
 static UseMethods *useMethod=nil;
@@ -26,6 +25,14 @@ static UseMethods *useMethod=nil;
     return arc4random_uniform(end) + start;
 }
 
+-(void)shakeTheView:(UIView *) view theRepeatCount:(int) repeatCount theDuration:(CGFloat) duration floatValues: (CGFloat) f1 : (CGFloat) f2 : (CGFloat) f3 {
+    CAKeyframeAnimation * anim = [ CAKeyframeAnimation animationWithKeyPath:@"transform" ] ;
+    anim.values = @[ [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(f1, f2, f3) ], [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-1*f1, -1*f2, -1*f3) ] ] ;
+    anim.autoreverses = YES ;
+    anim.repeatCount = repeatCount ;
+    anim.duration = duration ;
+    [view.layer addAnimation:anim forKey:nil];
+}
 
 
 @end

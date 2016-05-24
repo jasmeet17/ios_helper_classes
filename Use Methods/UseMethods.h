@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UseMethods : NSObject
 
@@ -27,5 +28,15 @@
  @return A random number generated between [start,end)
  */
 -(NSUInteger) generateRandomNumberBetween:(int) start to:(int) end;
+
+/**
+ * Shake the UIView in a particular Direction 
+ @param view That needs to be shaked
+ @param repeatCount tells the number of time it needs to shake
+ @param duration tells the amount of time for which to play the animation
+ @param floatvalues f1 , f2 , f3 tells in which direction to shake like f1_amount-> Vertically f2_amount-> Horizontally
+ */
+
+-(void)shakeTheView:(UIView *) view theRepeatCount:(int) repeatCount theDuration:(CGFloat) duration floatValues: (CGFloat) f1 : (CGFloat) f2 : (CGFloat) f3 ;
 
 @end
