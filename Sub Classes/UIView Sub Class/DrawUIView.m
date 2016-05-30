@@ -22,5 +22,12 @@
     [self.layer setCornerRadius:cornerRadius];
 }
 
+-(void)setBorderWidth:(CGFloat)borderWidth{
+    [self.layer setBorderWidth:borderWidth];
+}
+
+-(void) setBorderColor:(UIColor *)borderColor{
+    [self.layer setBorderColor:borderColor.CGColor];
+}
 
 @end

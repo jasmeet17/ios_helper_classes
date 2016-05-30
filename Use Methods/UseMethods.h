@@ -39,4 +39,11 @@
 
 -(void)shakeTheView:(UIView *) view theRepeatCount:(int) repeatCount theDuration:(CGFloat) duration floatValues: (CGFloat) f1 : (CGFloat) f2 : (CGFloat) f3 ;
 
+/**
+ * Creates a UIAlertController(works with iOS 8.0 and above) and show OK button(only)
+ @param message will be displayed as message in the Alert
+ @param title will be displayed as title of the Alert
+ */
+-(void)showMessage:(NSString*)message withTitle:(NSString *)title;
+
 @end

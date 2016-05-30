@@ -12,6 +12,7 @@ IB_DESIGNABLE
 @interface DrawUIView : UIView
 
 @property (nonatomic) IBInspectable CGFloat cornerRadius;
-
+@property (nonatomic) IBInspectable CGFloat borderWidth;
+@property (nonatomic) IBInspectable UIColor *borderColor;
 
 @end
